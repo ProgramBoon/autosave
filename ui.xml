@@ -1,0 +1,5 @@
+<settings><text>Text</text><list><user>postgres</user><password>xthyjskm2000</password><host>localhost</host><database>keenup</database><port>4</port><atime>15:30</atime></list><list><cron>1</cron>
+<sql>'pg_dump -U',ScheduleManager.us,' -h',ScheduleManager.hos,ScheduleManager.dbn,'> ',now.strftime("%Y_%m_%d")+'_'+ScheduleManager.dbn+'.pgsql.backup'</sql>
+<wait>11</wait></list></settings>
+
+
