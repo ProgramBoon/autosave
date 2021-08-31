@@ -1,5 +1,50 @@
-<settings><text>Text</text><list><user>postgres</user><password>xthyjskm2000</password><host>localhost</host><database>keenup</database><port>4</port><atime>15:30</atime></list><list><cron>1</cron>
-<sql>'pg_dump -U',ScheduleManager.us,' -h',ScheduleManager.hos,ScheduleManager.dbn,'> ',now.strftime("%Y_%m_%d")+'_'+ScheduleManager.dbn+'.pgsql.backup'</sql>
-<wait>11</wait></list></settings>
+<settings>
+<connect>
+    <user>postgres</user>
+    <password>xthyjskm2000</password>
+    <host>localhost</host>
+    <database>keenup</database>
+    <port>8976</port>
+    <server>itest7</server>
+    <task>
+    <cron>1</cron>
+    <sql>PGPASSWORD='{password}' pg_dump -U {user} -h {host} -d {dbname} > {x}_{dbname}.pgsql.backup</sql>
+    <atime>14:25</atime>
+    <day>tuesday</day>
+    <wait>11</wait>
+    </task>
+
+    <task>
+    <cron>1</cron>
+    <sql>PGPASSWORD='{password}' pg_dump -U {user} -h {host} -d {dbname} > {x}_{dbname}.pgsql2.backup</sql>
+    <atime>14:30</atime>
+    <day>tuesday</day>
+    <wait>11</wait>
+    </task>
+
+
+
+    <user>postgres</user>
+    <password>xthyjskm2000</password>
+    <host>localhost</host>
+    <database>keenup</database>
+    <port>8976</port>
+    <server>itest7</server>
+    <task>
+    <cron>1</cron>
+    <sql>PGPASSWORD='{password}' pg_dump -U {user} -h {host} -d {dbname} > {x}_{dbname}.pgsql3.backup</sql>
+    <atime>14:35</atime>
+    <day>tuesday</day>
+    <wait>11</wait>
+    </task>
+</connect>
+
+
+
+
+</settings>
+
+
+<!-- Команда для sql; важно не менять подстроку "TO DISK = N'" <sql>"C:\PROGRA~1\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn\SQLCMD.EXE" -S {host} -U {user} -P {password} -j -Q "BACKUP DATABASE {dbname} TO DISK = N'C:\backup\iyiy_{x}_{dbname}.bak' WITH NOFORMAT{q} NOINIT{q} NAME= N'{dbname}-full'{q} SKIP{q} NOREWIND{q} NOUNLOAD{q} COMPRESSION{q} STATS = 10" {A} \</sql> -->
 
 
