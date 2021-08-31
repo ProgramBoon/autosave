@@ -1,4 +1,7 @@
 import start
 
+
+
 st = start.ScheduleManager()
-st.job()
+st.alott()
+
