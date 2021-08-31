@@ -1,7 +1,7 @@
 <settings>
 <connect>
     <user>postgres</user>
-    <password>xthyjskm2000</password>
+    <password></password>
     <host>localhost</host>
     <database>keenup</database>
     <port>8976</port>
@@ -25,7 +25,7 @@
 
 
     <user>postgres</user>
-    <password>xthyjskm2000</password>
+    <password></password>
     <host>localhost</host>
     <database>keenup</database>
     <port>8976</port>
