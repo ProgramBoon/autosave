@@ -21,7 +21,7 @@ class Database:
             print(date_object)
 
             try:
-                db = pgsql.Connection(database="autsave", user="postgres", password="xthyjskm2000")
+                db = pgsql.Connection(database="autsave", user="postgres", password="")
                 print(db("INSERT INTO public.info(hostname, filepath, date, filesize) VALUES(%s, %s, %s, %s)", data[0], data[1],data[2],data[3]))
                 print("INSERT INTO public.info(hostname, filepath, date, filesize) VALUES(%s, %s, %s, %s)", (data[0],
                          data[1], data[2], data[3]))
